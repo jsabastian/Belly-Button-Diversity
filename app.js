@@ -33,7 +33,7 @@ function getPlot(id) {
           marker: {
             color: '#1ea4c9'},
             type:"bar",
-            orientation: "v",
+            orientation: "h",
       };
     
       // Create data variable
@@ -163,7 +163,7 @@ function getPlot(id) {
           }
         }
       ],
-      title: "<b>Belly Button Washing Frequency</b> <br> Scrubs per Week",
+      title: "<b>Navel Wash Frequency</b> <br> (per Week)",
       height: 500,
       width: 500,
       xaxis: {
