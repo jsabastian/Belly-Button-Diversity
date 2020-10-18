@@ -64,7 +64,7 @@ function getPlot(id) {
           mode: "markers",
           marker: {
             color: samples.otu_ids,
-            colorscale: "Earth",
+            colorscale: "thermal",
             size: samples.sample_values
           },
           text: samples.otu_labels
