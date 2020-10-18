@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Bellybutton Biodiversity</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
+      >
+</head>
+
+<body style="background-color:grey">
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 jumbotron text-center" style="background-image:url('bellybac4.jpg'); background-size: 100% 100%; background-repeat:no-repeat;">
+        <h1 style="color:white;">Belly Button Biodiversity Dashboard</h1>
+        <p style="color: white;">Use the interactive charts below to explore the dataset</p>
+      </div>
+    </div>
+    <div class="col-md-12">
+      <p style="color: white;font-size: medium;">
+        BELLY buttons are actually a lot like rainforests, according to professional navel gazers.<br>
+
+        A study that looked into the contents of 60 belly buttons found 2,368 species of bacteria in total.
+        Some of the bacterial species were even thought to be brand new to science.<br>
+
+The cleaner navels had around 29 species but others had as many as 107.<br>
+
+The most common amount of bacteria types to have was around 67.<br>
+It's important to learn more about what microbes we have on our skin because researchers think they could be linked to our immune system.<br>
+
+They are also thought to impact things like acne and how soft your skin is.
+       </p>
+       <br>
+  <br>
+  <br>
+  </div>
+  
+    <div class="row">
+      <div class="col-md-2">
+        <div class="well">
+          <h5>Test Subject ID No.:</h5>
+          <!-- <select id="selDataset"></select> -->
+          <select id="selDataset" onchange="optionChanged(this.value)"></select>
+        </div>
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h3 class="panel-title">Demographic Info</h3>
+          </div>
+          <div id="sample-metadata" class="panel-body" style="word-wrap: break-word;font-size: large"></div>
+          
+        </div>
+      </div>
+      <div class="col-md-5">
+        <div id="bar"></div>
+        <p style="color: blue;font-size: medium;"><b>This bar chart plots top 10 cultures in descending<br> order for selected subject id, selected from dropdown.</b></p>
+      </div>
+      <div class="col-md-5">
+        <div id="gauge"></div>
+        <p style="color: blue;font-size: medium;"><b>Gauge charts displays belly button washing frequency in a week  for selected subject id, selected from dropdown.</b></p>
+      </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div class="row">
+      <div class="col-md-12">
+        <div id="bubble"></div>
+        <p style="color: blue;font-size: medium;"><b>Bubble chart plots bacteria cultures per sample for selected subject id, selected from dropdown.</b></p>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <script src="charts.js"></script>
+
+</body>
+
+</html>
