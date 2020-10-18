@@ -33,7 +33,7 @@ function getPlot(id) {
           marker: {
             color: '#1ea4c9'},
             type:"bar",
-            orientation: "h",
+            orientation: "h"
       };
     
       // Create data variable
@@ -132,7 +132,7 @@ function getPlot(id) {
         textposition: "inside",
         marker: {
           colors: [
-            "rgba(0,105,11,.5)",
+            "rgba(3, 42, 171,.5)",
             "rgba(10,120,22,.5)",
             "rgba(14,127,0,.5)",
             "rgba(110,154,22,.5)",
@@ -163,7 +163,7 @@ function getPlot(id) {
           }
         }
       ],
-      title: "<b>Navel Wash Frequency</b> <br> (per Week)",
+      title: "<b>Navel Wash Frequency</b> <br> (times per Week)",
       height: 500,
       width: 500,
       xaxis: {
