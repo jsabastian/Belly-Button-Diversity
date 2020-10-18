@@ -2,6 +2,12 @@ In this assignment, you will build an interactive dashboard to explore the [Bell
 
 The dataset reveals that a small handful of microbial species (also called operational taxonomic units, or OTUs, in the study) were present in more than 70% of people, while the rest were relatively rare.
 
+
+## Deployment
+
+https://jsabastian.github.io/bellybuttondiversity/
+
+
 ## Step 1: Plotly
 
 1. Use the D3 library to read in `samples.json`.
@@ -44,18 +50,6 @@ The following task is advanced and therefore optional.
 
 * Update the chart whenever a new sample is selected.
 
-
-## Deployment
-
-* Deploy your app to a free static page hosting service, such as GitHub Pages. Submit the links to your deployment and your GitHub repo.
-
-* Ensure your repository has regular commits (i.e. 20+ commits) and a thorough README.md file
-
-## Hints
-
-* Use `console.log` inside of your JavaScript code to see what your data looks like at each step.
-
-* Refer to the [Plotly.js documentation](https://plot.ly/javascript/) when building the plots.
 
 ### About the Data
 
