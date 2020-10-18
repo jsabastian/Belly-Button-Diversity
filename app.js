@@ -13,7 +13,7 @@ function getPlot(id) {
           
       console.log(samples);
     
-      // Retrieve the top 10 samples
+      // top 10 samples
       var samplevalues = samples.sample_values.slice(0, 10).reverse();
     
       // Retrieve only the Top 10 otu ids for the plot OTU & reverse the order
@@ -22,7 +22,7 @@ function getPlot(id) {
       // Map OTU id's to the desired form to plot
       var OTU_id = OTU_top.map(d => "OTU " + d)
         
-      // Retrieve the Top 10 labels for the plot
+      // Top 10 labels for the plot
       var labels = samples.otu_labels.slice(0, 10);
   
       // Create trace variable for the Bar plot
@@ -31,9 +31,9 @@ function getPlot(id) {
           y: OTU_id,
           text: labels,
           marker: {
-            color: '#005a99'},
+            color: '#1ea4c9'},
             type:"bar",
-            orientation: "h",
+            orientation: "v",
       };
     
       // Create data variable
@@ -42,7 +42,7 @@ function getPlot(id) {
       // Create layout variable to set plots layout
       var layout = {
         font:{family:"Helvetica Rounded MT Bold"},
-        title: "Top 10 OTU",
+        title: "Top 10 Bacteria",
         yaxis:{
             tickmode:"linear",
         },
@@ -74,9 +74,8 @@ function getPlot(id) {
       var layout_b = {
         margin: { t: 0},
         hovermode: "closest",
-        // font:{family:"Helvetica Rounded MT Bold"},
         xaxis:{
-          title: "<b>OTU ID</b>",
+          title: "<b>OTU (Bacteria ID)</b>",
         },
         showlegend: false
       };
@@ -90,7 +89,7 @@ function getPlot(id) {
     })
   };
   
-  // BONUS: Create Gauge Chart
+  // Create Gauge Chart
   function buildGauge(id) {
     d3.json("samples.json").then((data)=> {
       console.log(data)
@@ -99,7 +98,7 @@ function getPlot(id) {
       var wfreq = dict.wfreq
       console.log(`Washing Freq: ${wfreq}`)
       
-    // Enter Washing Frequency (wfreq) between 0 and 180
+    // Washing Frequency (wfreq) range
     var level = parseFloat(wfreq) * 20;
   
     // Trigonometry to calculate meter point
@@ -108,8 +107,6 @@ function getPlot(id) {
     var radians = (degrees * Math.PI) / 180;
     var x = radius * Math.cos(radians);
     var y = radius * Math.sin(radians);
-  
-    // Path may have to change to create a better triangle
     var mainPath = "M -.02 -0.05 L .02 0.05 L ";
     var pathX = String(x);
     var space = " ";
@@ -122,7 +119,7 @@ function getPlot(id) {
         type: "scatter",
         x:[0],
         y:[0],
-        marker: { size: 12, color: "850000" },
+        marker: { size: 12, color: "250000" },
         showlegend: false,
         text: level,
         hoverinfo: "text+name"
@@ -194,7 +191,7 @@ function getPlot(id) {
       // Read the json file to get data
       d3.json("samples.json").then((data)=> {
           
-          // Retrieve the metadata info for the demographic panel
+          // metadata info for the demographic panel
           var metadata = data.metadata;
   
           console.log(metadata)
@@ -208,14 +205,14 @@ function getPlot(id) {
           // Empty the demographic info panel each time before getting new id info
           demographicInfo.html("");
   
-          // Retrieve the necessary demographic data for the id and append the info to the panel
+          // necessary demographic data for the id and append the info to the panel
           Object.entries(result).forEach((key) => {   
                   demographicInfo.append("h6").text(key[0].toLocaleLowerCase() + ": " + key[1] + " \n");    
           });
       });
   }
   
-  // Create the function for the change event
+  // Create the function for the subject id selection
   function optionChanged(id) {
       getPlot(id);
       getInfo(id);
