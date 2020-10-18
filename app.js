@@ -31,7 +31,7 @@ function getPlot(id) {
           y: OTU_id,
           text: labels,
           marker: {
-            color: '#1ea4c9'},
+            color: '#3255c9'},
             type:"bar",
             orientation: "h"
       };
@@ -132,15 +132,16 @@ function getPlot(id) {
         textposition: "inside",
         marker: {
           colors: [
-            "rgba(3, 42, 171,.5)",
-            "rgba(10,120,22,.5)",
-            "rgba(14,127,0,.5)",
-            "rgba(110,154,22,.5)",
-            "rgba(170,202,42,.5)",
-            "rgba(202,209,95,.5)",
-            "rgba(210,206,145,.5)",
-            "rgba(232,226,202,.5)",
-            "rgba(240, 230,215,.5)",
+            "rgba(30,144,255,.5)",
+            "rgba(176,196,222,.5)",
+            "rgba(0,191,255,.5)",
+            "rgba(135,206,235,.5)",
+            "rgba(135,206,250,.5)",
+            "rgba(173,216,230,.5)",
+            "rgba(176,224,230,.5)",
+            "rgba(230,230,250,.5)",
+            "rgba(240,248,255,.5)",
+            // so we do not see the rest of the circle 
             "rgba(255,255,255,0)"
           ]
         },
