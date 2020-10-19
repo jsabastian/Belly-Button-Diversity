@@ -4,9 +4,7 @@ function getPlot(id) {
     // Retrieve data from the json file
     d3.json("samples.json").then((data)=> {
       console.log(data)
-
-      var blues = d3.scaleOrdinal(d3.schemeBlues[9]);
-
+  
       var wfreq = data.metadata.map(d => d.wfreq)
       //console.log(`Washing Freq: ${wfreq}`)****************
           
@@ -33,7 +31,7 @@ function getPlot(id) {
           y: OTU_id,
           text: labels,
           marker: {
-            color: blues},
+            color: 'Blues[4]'},
             type:"bar",
             orientation: "h"
       };
@@ -66,7 +64,7 @@ function getPlot(id) {
           mode: "markers",
           marker: {
             color: samples.otu_ids,
-            colorscale: blues,
+            colorscale: "continent",
             size: samples.sample_values
           },
           text: samples.otu_labels
@@ -137,7 +135,7 @@ function getPlot(id) {
             "rgba(30,144,255,.5)",
             "rgba(176,196,222,.5)",
             "rgba(0,191,255,.5)",
-            "rgba(135,206,255,.5)",
+            "rgba(135,206,235,.5)",
             "rgba(135,206,250,.5)",
             "rgba(173,216,230,.5)",
             "rgba(176,224,230,.5)",
