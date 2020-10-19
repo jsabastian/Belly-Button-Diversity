@@ -31,7 +31,7 @@ function getPlot(id) {
           y: OTU_id,
           text: labels,
           marker: {
-            color: '#3255c9'},
+            color: 'Blues[5]'},
             type:"bar",
             orientation: "h"
       };
@@ -131,11 +131,11 @@ function getPlot(id) {
         textinfo: "text",
         textposition: "inside",
         marker: {
-          colors: [
+          colors: [ // include opacity
             "rgba(30,144,255,.5)",
             "rgba(176,196,222,.5)",
             "rgba(0,191,255,.5)",
-            "rgba(135,206,235,.5)",
+            "rgba(135,206,255,.5)",
             "rgba(135,206,250,.5)",
             "rgba(173,216,230,.5)",
             "rgba(176,224,230,.5)",
