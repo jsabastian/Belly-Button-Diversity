@@ -5,7 +5,7 @@ The dataset reveals that a small handful of microbial species (also called opera
 
 ## Deployment
 
-https://jsabastian.github.io/bellybuttondiversity/
+https://jsabastian.github.io/Belly-Button-Diversity/
 
 
 ## Step 1: Plotly
